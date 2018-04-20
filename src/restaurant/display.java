@@ -19,17 +19,7 @@ public class display  {
      
    members m = new members();
      m.Admin();
-//     food m = new food();
-//     m.Food();
-//     drinks d = new drinks();
-//     d.Drinks();
-     
-//     dessert de = new dessert();
-//     de.Dessert();
-        
-//        promotion p = new promotion();
-//        p.Promotion();
-////     
+
     
 }
 

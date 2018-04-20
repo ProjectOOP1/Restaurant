@@ -20,16 +20,28 @@ private int numY;
         int y =3;
         int tableLoca[][]= new int[y][x]; 
        int number=1; 
-       System.out.println("หมายเลขโต๊ะ");
-        for(int i=0 ; i<y ; i++){
+       
+       System.out.println("เลือกโต๊ะ:");
+       int add0= 0; 
+       for(int i=0 ; i<y ; i++){
             for(int j=0 ; j<x; j++){
-                System.out.print(number+"         ");
+                if(add0<9){
+                    System.out.print("0");
+                System.out.print(number);    
+                System.out.print("         ");
+                }else{
+                   
+                System.out.print(number);    
+                System.out.print("         ");
+                }
                 tableLoca[i][j]=number;
                 number++;
+                add0++;
             }
             System.out.println();
         }
-        System.out.print("กรุณาเลือกโต๊ะ:");
+      
+        System.out.print("เลือกโต๊ะ:");
         Scanner input = new Scanner (System.in);
         int numTable = input.nextInt();
   
@@ -86,21 +98,31 @@ private int numY;
                 default:numX =2; numY =3;
                     break  ;
         }
-        
-        /*for(int i=0 ; i<y ; i++){
+        add0 = 0;
+        for(int i=0 ; i<y ; i++){
             for(int j=0 ; j<x; j++){
                 
                 if(tableLoca[i][j]==tableLoca[numX][numY]){
                     tableLoca[i][j]=0;
                 }
-               
-                System.out.print(tableLoca[i][j]+"         ");
+               if(add0<9){
+                    System.out.print("0");
+                System.out.print(tableLoca[i][j]);    
+                System.out.print("         ");
+                }else{
+                   
+                System.out.print(tableLoca[i][j]);    
+                System.out.print("         ");
+                }
+                
                 number++;
+                add0++;
+                
             }
             System.out.println();
-        }*/
+        }
         
-        
+      
             showmenu show = new showmenu();
             show.ShowMenu();
         }

@@ -15,17 +15,17 @@ public class showmenu extends Menu{
 
     @Override
     void Food() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     void Dessert() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     void Drinks() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     
@@ -33,14 +33,17 @@ public class showmenu extends Menu{
     @Override
     void ShowMenu() {
        
-         int num[]={70,80,90,99,100,1100};
+        // int num[]={70,80,90,99,100,1100};
         int total=0;
-       System.out.println("*****Menu******");  
+        System.out.println("");
+         System.out.println("*****เลือกการทำงาน*****");
         System.out.println("1.อาหาร ");
         System.out.println("2.เครื่องดื่ม ");
         System.out.println("3.ของหวาน ");
-        System.out.println("4.สิทธิพิเศษ ");
-        System.out.println("5.คิดตังค์ ");
+        System.out.println("4.คิดราคาของหวาน ");
+        System.out.println("5.คิดราคาอาหาร");
+        System.out.println("6.คิดราคาเครื่องดื่ม");
+        System.out.println("7.รวมเงินทั้งหมด ");
         
         
         Scanner Sc = new Scanner(System.in );
@@ -60,10 +63,16 @@ public class showmenu extends Menu{
             case 4 :promotion p = new promotion();
                                 p.Promotion();
                                 break;
-            case 5 :countmoney mo = new countmoney();
-                                mo.Countmoney();
+            case 5 :promotion p1 = new promotion();
+                                p1.Promotion1();
                                 break;
-            default : System.out.println("กรุณาเลือกเมนูใหม่ :");showmenu me = new showmenu();
+            case 6 :promotion p2 = new promotion();
+                                p2.Promotion2();
+                                break;
+            case 7 :countmoney mo = new countmoney();
+                                mo.CountAllMoney();
+                                break;
+            default : showmenu me = new showmenu();
                                 me.ShowMenu();
                                 break;
                                         

@@ -8,13 +8,14 @@ package restaurant;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import static restaurant.food.m3;
 
 /**
  *
  * @author Komgrit
  */
 public class dessert extends Menu {
-public Map<String, String> m1;
+public static Map<String, String> m1;
 
 
     @Override
@@ -31,14 +32,23 @@ public Map<String, String> m1;
             do {
                 String strI = null;
                 StringBuilder sb = new StringBuilder();
-        System.out.println("==================");  
-        System.out.println("เมนูของหวาน");
+        System.out.print("");     
+        System.out.println("*****เมนูของหวาน******");
         System.out.println("1.ขนมเปียกปูน 50 ฿");
         System.out.println("2.กล้วยบวชชี 50 ฿");
         System.out.println("3.ไอศครีม 50 ฿");
         System.out.println("0. ออก");
-        System.out.print("เลือกของหวาน : ");
+        System.out.print("เลือกเมนูของหวาน : ");
              m =Sc.nextInt ();
+             if(m==0){
+                 break;
+             }else if (m>3){
+         System.out.println("");        
+         System.out.println("กรูณาเลือกเมนูของหวานใหม่");
+         System.out.println("");
+         continue;
+         
+             }    
              System.out.print("จำนวน:");
              int y = Sc.nextInt();
               String value = null;
@@ -61,10 +71,10 @@ public Map<String, String> m1;
                   m1.put("ไอศครีม", strI);
               break;
              
-              default:m1.put(" "," ");           
+              default:
+                  break;
           }
-         // System.out.println(strI);
-        System.out.println(m1);
+            System.out.println(m1);
             }while( m!=0 );
             
          
@@ -73,9 +83,7 @@ public Map<String, String> m1;
             s.ShowMenu();
         
     }
-    public Map value(){
-    return m1;
-    }
+
 
     @Override
     void Drinks() {

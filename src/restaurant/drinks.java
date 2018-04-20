@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Komgrit
  */
 public class drinks extends Menu{
-public Map<String, String> m1;
+public static Map<String, String> m2;
     @Override
     void Food() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -30,18 +30,26 @@ public Map<String, String> m1;
         Scanner Sc = new Scanner(System.in);
       
             int m;
-            m1 = new HashMap<String, String>();
+            m2 = new HashMap<String, String>();
             do {
                 String strI = null;
                 StringBuilder sb = new StringBuilder();
-        System.out.println("==================");  
-        System.out.println("เมนูเครื่องดื่ม");
+        System.out.println("");       
+        System.out.println("******เมนูเครื่องดื่ม******");
         System.out.println("1.น้ำผลไม้ 50 ฿");
         System.out.println("2.น้ำอัดลม 30 ฿");
         System.out.println("3.น้ำหวาน 30 ฿");
         System.out.println("0. ออก");
-        System.out.print("เลือกเครื่องดื่ม : ");
+        System.out.print("เลือกเมนูเครื่องดื่ม : ");
              m =Sc.nextInt ();
+              if(m==0){
+                 break;
+             }else if (m>3){
+          System.out.println("");       
+         System.out.println("กรูณาเลือกเมนูเครื่องดื่มใหม่");
+         System.out.println("");
+         continue;
+             }    
              System.out.print("จำนวน:");
              int y = Sc.nextInt();
               String value = null;
@@ -51,22 +59,23 @@ public Map<String, String> m1;
               case 1:amount =50*y;
                    sb.append(amount);
                     strI = sb.toString();
-                  m1.put("น้ำผลไม้", "50");
+                  m2.put("น้ำผลไม้", strI);
               break;
               case 2:amount =30*y;
                    sb.append(amount);
                     strI = sb.toString();
-                  m1.put("น้ำอัดลม", "30");
+                  m2.put("น้ำอัดลม", strI);
               break;
               case 3:amount =30*y;
                    sb.append(amount);
                     strI = sb.toString(); 
-                  m1.put("น้ำหวาน", "30");
+                  m2.put("น้ำหวาน", strI);
               break;
              
-              default:m1.put(" "," ");           
+              default:
+                  break;
           }
-          //System.out.println(strI);
+          System.out.println(m2);
         
             }while( m!=0 );
             showmenu s = new showmenu();
