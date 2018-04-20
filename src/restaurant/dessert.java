@@ -31,14 +31,15 @@ public Map<String, String> m1;
             do {
                 String strI = null;
                 StringBuilder sb = new StringBuilder();
+        System.out.println("==================");  
         System.out.println("เมนูของหวาน");
         System.out.println("1.ขนมเปียกปูน 50 ฿");
         System.out.println("2.กล้วยบวชชี 50 ฿");
         System.out.println("3.ไอศครีม 50 ฿");
         System.out.println("0. ออก");
-        System.out.println("เลือกเมนูเครื่องดื่ม : ");
+        System.out.print("เลือกของหวาน : ");
              m =Sc.nextInt ();
-             System.out.println("จำนวน ?");
+             System.out.print("จำนวน:");
              int y = Sc.nextInt();
               String value = null;
               int amount = 0;

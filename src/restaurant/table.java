@@ -20,7 +20,7 @@ private int numY;
         int y =3;
         int tableLoca[][]= new int[y][x]; 
        int number=1; 
-       System.out.println("Select table number:");
+       System.out.println("หมายเลขโต๊ะ");
         for(int i=0 ; i<y ; i++){
             for(int j=0 ; j<x; j++){
                 System.out.print(number+"         ");
@@ -29,7 +29,7 @@ private int numY;
             }
             System.out.println();
         }
-        System.out.println("Select table number:");
+        System.out.print("กรุณาเลือกโต๊ะ:");
         Scanner input = new Scanner (System.in);
         int numTable = input.nextInt();
   
@@ -87,7 +87,7 @@ private int numY;
                     break  ;
         }
         
-        for(int i=0 ; i<y ; i++){
+        /*for(int i=0 ; i<y ; i++){
             for(int j=0 ; j<x; j++){
                 
                 if(tableLoca[i][j]==tableLoca[numX][numY]){
@@ -98,9 +98,9 @@ private int numY;
                 number++;
             }
             System.out.println();
-        }
+        }*/
         
-        System.out.println("*****Menu******");
+        
             showmenu show = new showmenu();
             show.ShowMenu();
         }

@@ -31,16 +31,17 @@ public Map<String, String> m1;
             do {
                 String strI = null;
                 StringBuilder sb = new StringBuilder();
+        System.out.println("==================");        
         System.out.println("เมนูอาหาร");
         System.out.println("1.ต้มยำกุ้ง 300 ฿");
         System.out.println("2.ผัดผักบุ้ง 200 ฿");
         System.out.println("3.ไก่ทอดน้ำปลา 90 ฿");
         System.out.println("4.ไก่อบสมุนไพร 99 ฿");
         System.out.println("0. ออก");
-        System.out.println("เลือกเมนูอาหาร : ");
+        System.out.print("เลือกอาหาร : ");
              m =Sc.nextInt ();
              
-             System.out.println("จำนวน ?");
+            System.out.print("จำนวน:");
              int y = Sc.nextInt();
               String value = null;
               int amount = 0;
@@ -51,10 +52,10 @@ public Map<String, String> m1;
                     strI = sb.toString();
                   m1.put("ต้มยำกุ้ง", strI);
               break;
-              case 2: amount =200*y;
+              case 2: amount =80*y;
                    sb.append(amount);
                     strI = sb.toString();
-                  m1.put("ผัดผักบุ้ง", "200");
+                  m1.put("ผัดผักบุ้ง", "80");
               break;
               case 3: amount =90*y;
                    sb.append(amount);
@@ -67,7 +68,12 @@ public Map<String, String> m1;
                     strI = sb.toString();
                   m1.put("ไก่อบสมุนไพร", "99");
               break;
-              default:m1.put(" "," ");           
+              default:m1.put(" "," "); 
+              break;
+              
+              
+             
+             
           }
         //
           

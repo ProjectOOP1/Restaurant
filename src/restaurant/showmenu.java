@@ -35,16 +35,16 @@ public class showmenu extends Menu{
        
          int num[]={70,80,90,99,100,1100};
         int total=0;
-       
+       System.out.println("*****Menu******");  
         System.out.println("1.อาหาร ");
         System.out.println("2.เครื่องดื่ม ");
         System.out.println("3.ของหวาน ");
-        System.out.println("4.Promotion ");
+        System.out.println("4.สิทธิพิเศษ ");
         System.out.println("5.คิดตังค์ ");
         
         
         Scanner Sc = new Scanner(System.in );
-            System.out.println("เลือกเมนู :");
+            System.out.print("เลือกเมนู :");
          int m=Sc.nextInt ();
         switch(m){
             
@@ -63,7 +63,7 @@ public class showmenu extends Menu{
             case 5 :countmoney mo = new countmoney();
                                 mo.Countmoney();
                                 break;
-            default : showmenu me = new showmenu();
+            default : System.out.println("กรุณาเลือกเมนูใหม่ :");showmenu me = new showmenu();
                                 me.ShowMenu();
                                 break;
                                         
